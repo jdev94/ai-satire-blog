@@ -1,191 +1,35 @@
----
----
+/* 🏠 Hero de la page d'accueil */
 
-@import "minima";
-
-/* 🌍 Fond général et typographie */
-body {
-  background: #f5f5f7;
-  color: #222;
+/* On cache le gros titre "Accueil" */
+.home .page-heading {
+  display: none;
 }
 
-/* 🧱 Container principal du site */
-.site {
-  max-width: 960px;
-  margin: 2rem auto 3rem auto;
-  padding: 0 1.5rem 2.5rem;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-}
-
-/* 🧭 Header du site */
-.site-header {
-  border-bottom: none;
-  padding: 1.8rem 0 1.2rem;
-}
-
-.site-title {
-  font-size: 1rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.site-title a {
-  text-decoration: none;
-  color: #111827;
-}
-
-.site-nav .page-link {
-  color: #6b7280;
-  font-size: 0.95rem;
-  margin-left: 1rem;
-}
-
-.site-nav .page-link:hover {
-  color: #111827;
-}
-
-/* 📃 Liste d’articles sur la page d’accueil */
-.post-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-list > li {
-  margin: 0 0 1.8rem;
-  padding: 1.25rem 1.5rem;
-  background: #fafafa;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-}
-
-.post-list > li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
-  background: #ffffff;
-}
-
-.post-list a.post-link {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #111827;
-}
-
-.post-list a.post-link:hover {
-  text-decoration: none;
-  color: #0f766e;
-}
-
-.post-list .post-meta {
-  font-size: 0.85rem;
-  color: #9ca3af;
-}
-
-/* 🖼️ Image de couverture des articles (DALL·E) */
-.post-cover {
-  display: block;
-  width: 100%;
-  max-height: 280px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin: 0 auto 1.5rem auto;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.post-cover:hover {
-  transform: scale(1.02);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22);
-}
-
-/* 📝 Page article (show) */
-.post-header {
-  margin-bottom: 1.5rem;
-}
-
-.post-title {
-  font-size: 2.2rem;
-  line-height: 1.15;
+/* Titre "Bienvenue sur le blog IA Satirique" */
+.home h1:first-of-type,
+.home h2:first-of-type {
+  margin-top: 0;
+  font-size: 2.1rem;
+  line-height: 1.2;
   margin-bottom: 0.35rem;
 }
 
-.post-meta {
-  color: #9ca3af;
-  font-size: 0.9rem;
-}
-
-.post-excerpt {
-  margin-top: 0.4rem;
-  color: #4b5563;
-}
-
-/* ✒️ Contenu de l’article */
-.post-content p {
-  font-size: 1.03rem;
-  line-height: 1.8;
-  margin: 0 0 1.1rem;
-}
-
-.post-content h2 {
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  font-size: 1.6rem;
-}
-
-.post-content h3 {
-  margin-top: 1.6rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-}
-
-.post-content a {
-  color: #0f766e;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.post-content a:hover {
-  color: #047857;
-}
-
-/* 🦶 Footer */
-.site-footer {
-  border-top: none;
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  color: #9ca3af;
-  font-size: 0.85rem;
-  text-align: center;
-}
-.site-footer a {
+/* Sous-texte "Chaque jour, un article..." */
+.home h1:first-of-type + p,
+.home h2:first-of-type + p {
+  margin-top: 0.15rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
   color: #6b7280;
-}
-.site-footer a:hover {
-  color: #111827;
+  max-width: 40rem;
 }
 
-/* 📱 Ajustements responsive */
-@media (max-width: 768px) {
-  .site {
-    margin: 1rem auto 2rem auto;
-    padding: 0 1rem 2rem;
-  }
-
-  .post-cover {
-    max-height: 210px;
-  }
-
-  .post-title {
-    font-size: 1.7rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .post-cover {
-    max-height: 320px;
-  }
+/* Titre "Posts" transformé en petit label discret */
+.home .post-list-heading {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
 }
