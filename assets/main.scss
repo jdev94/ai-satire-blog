@@ -1,14 +1,11 @@
----
----
-
 @import "minima";
 
-// 🌈 Style des images de couverture dans les articles
-.post img {
+// 🎨 Style des images de couverture dans les articles
+.post-cover {
   display: block;
   width: 100%;
-  max-height: 280px;   // hauteur standard de la "bande"
-  object-fit: cover;   // recadre sans déformer
+  max-height: 280px; // hauteur standard
+  object-fit: cover; // recadrage sans déformation
   border-radius: 12px; // coins arrondis
   margin: 0 auto 1.5rem auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -16,14 +13,14 @@
 
 // 📱 Ajuste la hauteur sur les écrans plus petits
 @media (max-width: 768px) {
-  .post img {
+  .post-cover {
     max-height: 200px;
   }
 }
 
-// 💻 Un peu plus haute sur écrans larges
+// 💻 Un peu plus haute sur les écrans larges
 @media (min-width: 1200px) {
-  .post img {
+  .post-cover {
     max-height: 320px;
   }
 }
