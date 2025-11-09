@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section class="home">
+  <h1 class="page-title">Articles récents 📰</h1>
+
+  {% for post in site.posts %}
+    <article class="post-preview" style="margin-bottom: 2rem;">
+      <h2>
+        <a href="{{ post.url | relative_url }}" class="post-link" style="text-decoration:none; color:#111;">
+          {{ post.title }}
+        </a>
+      </h2>
+
+      <p class="post-meta" style="color:#777; font-size:0.9rem;">
+        {{ post.date | date: "%d %B %Y" }}
+      </p>
+
+      {% if post.excerpt %}
+        <p style="font-style:italic;">{{ post.excerpt }}</p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</section>
