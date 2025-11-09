@@ -3,102 +3,89 @@
 
 @import "minima";
 
-/* 🌐 Style global du site */
+/* 🌍 Fond général et typographie */
 body {
-  background-color: #f8f9fb;
-  color: #1a1a1a;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  background: #f5f5f7;
+  color: #222;
 }
 
-/* 🌈 Liens */
-a {
-  color: #0077ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* 🧱 Container principal du site */
+.site {
+  max-width: 960px;
+  margin: 2rem auto 3rem auto;
+  padding: 0 1.5rem 2.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
 
-a:hover {
-  color: #0055cc;
-}
-
-/* 🧱 Conteneur principal */
-.wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  background: transparent;
-}
-
-/* 🧠 En-tête du site */
+/* 🧭 Header du site */
 .site-header {
-  background: transparent;
-  padding: 1rem 0 0;
-  text-align: center;
+  border-bottom: none;
+  padding: 1.8rem 0 1.2rem;
 }
 
 .site-title {
-  font-weight: 700;
-  font-size: 1.4rem;
-  letter-spacing: 2px;
-  color: #222;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
-/* 📰 Page d'accueil */
-h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  text-align: center;
-  margin-top: 1rem;
-  color: #111;
+.site-title a {
+  text-decoration: none;
+  color: #111827;
 }
 
-p {
-  margin: 0.5rem 0;
+.site-nav .page-link {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-left: 1rem;
 }
 
-.site-description {
-  text-align: center;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 2rem;
+.site-nav .page-link:hover {
+  color: #111827;
 }
 
-/* 🧾 Post cards */
+/* 📃 Liste d’articles sur la page d’accueil */
 .post-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.post-list li {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.post-list > li {
+  margin: 0 0 1.8rem;
+  padding: 1.25rem 1.5rem;
+  background: #fafafa;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
-.post-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+.post-list > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+  background: #ffffff;
 }
 
-.post-title {
-  font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+.post-list a.post-link {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
 }
 
-.post-meta {
-  color: #777;
-  font-size: 0.9rem;
+.post-list a.post-link:hover {
+  text-decoration: none;
+  color: #0f766e;
 }
 
-/* 🧩 Images d'articles */
+.post-list .post-meta {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* 🖼️ Image de couverture des articles (DALL·E) */
 .post-cover {
   display: block;
   width: 100%;
@@ -106,32 +93,157 @@ p {
   object-fit: cover;
   border-radius: 12px;
   margin: 0 auto 1.5rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Responsive ajustement pour images */
+.post-cover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22);
+}
+
+/* 📝 Page article (show) */
+.post-header {
+  margin-bottom: 1.5rem;
+}
+
+.post-title {
+  font-size: 2.2rem;
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.post-meta {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.post-excerpt {
+  margin-top: 0.4rem;
+  color: #4b5563;
+}
+
+/* ✒️ Contenu de l’article */
+.post-content p {
+  font-size: 1.03rem;
+  line-height: 1.8;
+  margin: 0 0 1.1rem;
+}
+
+.post-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+}
+
+.post-content h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.post-content a {
+  color: #0f766e;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.post-content a:hover {
+  color: #047857;
+}
+
+/* 🦶 Footer */
+.site-footer {
+  border-top: none;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  text-align: center;
+}
+.site-footer a {
+  color: #6b7280;
+}
+.site-footer a:hover {
+  color: #111827;
+}
+
+/* 🏠 Hero de la page d'accueil : bannière "Cerveau sous-traité" */
+.hero {
+  position: relative;
+  margin-bottom: 3rem;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 400px;        /* adapté à ton image 1200x400 */
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6) contrast(1.05);
+  border-radius: 16px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  padding: 0 1.5rem;
+  max-width: 90%;
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* On cache le gros titre "Accueil" généré par le layout */
+.page-heading {
+  display: none;
+}
+
+/* Responsive hero */
 @media (max-width: 768px) {
-  .post-cover {
-    max-height: 200px;
+  .site {
+    margin: 1rem auto 2rem auto;
+    padding: 0 1rem 2rem;
+  }
+
+  .hero-img {
+    height: 260px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
   }
 }
 
-@media (min-width: 1200px) {
-  .post-cover {
-    max-height: 320px;
-  }
-}
-
-/* 🦾 FAUSSES PUBLICITÉS LATÉRALES */
+/* 🦾 Pubs latérales IA (gauche + droite) */
 .fake-ad {
   position: fixed;
-  top: 10vh;            /* position verticale de départ */
+  top: 10vh;            /* position verticale */
   z-index: 1000;
 }
 
 .fake-ad img {
   display: block;
-  max-height: 80vh;     /* hauteur max : 80 % de l’écran */
+  max-height: 80vh;     /* max 80% de la hauteur d'écran */
   max-width: 180px;     /* largeur max */
   width: auto;
   height: auto;
@@ -146,7 +258,7 @@ p {
   opacity: 1;
 }
 
-/* Gauche et droite */
+/* position gauche / droite */
 .fake-ad-left {
   left: 20px;
 }
@@ -155,19 +267,9 @@ p {
   right: 20px;
 }
 
-/* Cache sur mobile */
+/* cache les pubs sur mobile / petits écrans */
 @media (max-width: 1024px) {
   .fake-ad {
     display: none;
   }
-}
-
-/* 🦶 Pied de page */
-.site-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  padding: 2rem 0;
-  border-top: 1px solid #eee;
-  margin-top: 3rem;
 }
