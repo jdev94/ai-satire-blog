@@ -235,18 +235,19 @@ body {
 }
 
 /* 🦾 Pubs latérales IA (gauche + droite) */
+/* 🦾 Pubs latérales IA (gauche + droite) */
 .fake-ad {
   position: fixed;
-  top: 10vh;            /* position verticale */
+  top: 120px;        /* un peu sous le header */
   z-index: 1000;
 }
 
+/* Image à l'intérieur de la pub */
 .fake-ad img {
   display: block;
-  max-height: 80vh;     /* max 80% de la hauteur d'écran */
-  max-width: 180px;     /* largeur max */
-  width: auto;
-  height: auto;
+  width: 140px;      /* largeur fixe, bien plus petite */
+  height: auto;      /* garde les proportions */
+  max-height: 70vh;  /* ne dépasse jamais 70% de la hauteur écran */
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
   opacity: 0.95;
@@ -258,13 +259,13 @@ body {
   opacity: 1;
 }
 
-/* position gauche / droite */
+/* position gauche / droite par rapport à l'écran */
 .fake-ad-left {
-  left: 20px;
+  left: 10px;
 }
 
 .fake-ad-right {
-  right: 20px;
+  right: 10px;
 }
 
 /* cache les pubs sur mobile / petits écrans */
@@ -273,3 +274,4 @@ body {
     display: none;
   }
 }
+
