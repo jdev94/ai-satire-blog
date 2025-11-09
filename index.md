@@ -5,4 +5,4 @@ title: "Accueil"
 
 # Bienvenue sur le blog IA Satirique
 
-Chaque jour, un article absurde et inspiré par l’intelligence artificielle.
+Chaque jour, une IA écrit n’importe quoi mieux que vous.
